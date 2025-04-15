@@ -6,6 +6,8 @@ toolchain go1.23.8
 
 require (
 	github.com/99designs/gqlgen v0.17.70
+	github.com/go-chi/chi v1.5.5
+	github.com/go-chi/chi/v5 v5.2.1
 	github.com/mattn/go-sqlite3 v1.14.27
 	github.com/streadway/amqp v1.1.0
 	github.com/stretchr/testify v1.10.0
