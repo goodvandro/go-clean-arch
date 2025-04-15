@@ -6,6 +6,7 @@ toolchain go1.23.8
 
 require (
 	github.com/99designs/gqlgen v0.17.70
+	github.com/mattn/go-sqlite3 v1.14.27
 	github.com/stretchr/testify v1.10.0
 	github.com/vektah/gqlparser/v2 v2.5.23
 )
