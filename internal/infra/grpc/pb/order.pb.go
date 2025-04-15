@@ -24,8 +24,8 @@ const (
 type CreateOrderRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Price         string                 `protobuf:"bytes,2,opt,name=price,proto3" json:"price,omitempty"`
-	Tax           string                 `protobuf:"bytes,3,opt,name=tax,proto3" json:"tax,omitempty"`
+	Price         float32                `protobuf:"fixed32,2,opt,name=price,proto3" json:"price,omitempty"`
+	Tax           float32                `protobuf:"fixed32,3,opt,name=tax,proto3" json:"tax,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -67,26 +67,26 @@ func (x *CreateOrderRequest) GetId() string {
 	return ""
 }
 
-func (x *CreateOrderRequest) GetPrice() string {
+func (x *CreateOrderRequest) GetPrice() float32 {
 	if x != nil {
 		return x.Price
 	}
-	return ""
+	return 0
 }
 
-func (x *CreateOrderRequest) GetTax() string {
+func (x *CreateOrderRequest) GetTax() float32 {
 	if x != nil {
 		return x.Tax
 	}
-	return ""
+	return 0
 }
 
 type CreateOrderResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Price         string                 `protobuf:"bytes,2,opt,name=price,proto3" json:"price,omitempty"`
-	Tax           string                 `protobuf:"bytes,3,opt,name=tax,proto3" json:"tax,omitempty"`
-	FinalPrice    string                 `protobuf:"bytes,4,opt,name=final_price,json=finalPrice,proto3" json:"final_price,omitempty"`
+	Price         float32                `protobuf:"fixed32,2,opt,name=price,proto3" json:"price,omitempty"`
+	Tax           float32                `protobuf:"fixed32,3,opt,name=tax,proto3" json:"tax,omitempty"`
+	FinalPrice    float32                `protobuf:"fixed32,4,opt,name=final_price,json=finalPrice,proto3" json:"final_price,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -128,25 +128,25 @@ func (x *CreateOrderResponse) GetId() string {
 	return ""
 }
 
-func (x *CreateOrderResponse) GetPrice() string {
+func (x *CreateOrderResponse) GetPrice() float32 {
 	if x != nil {
 		return x.Price
 	}
-	return ""
+	return 0
 }
 
-func (x *CreateOrderResponse) GetTax() string {
+func (x *CreateOrderResponse) GetTax() float32 {
 	if x != nil {
 		return x.Tax
 	}
-	return ""
+	return 0
 }
 
-func (x *CreateOrderResponse) GetFinalPrice() string {
+func (x *CreateOrderResponse) GetFinalPrice() float32 {
 	if x != nil {
 		return x.FinalPrice
 	}
-	return ""
+	return 0
 }
 
 var File_internal_infra_grpc_protofiles_order_proto protoreflect.FileDescriptor
@@ -156,16 +156,16 @@ const file_internal_infra_grpc_protofiles_order_proto_rawDesc = "" +
 	"*internal/infra/grpc/protofiles/order.proto\x12\x02pb\"L\n" +
 	"\x12CreateOrderRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n" +
-	"\x05price\x18\x02 \x01(\tR\x05price\x12\x10\n" +
-	"\x03tax\x18\x03 \x01(\tR\x03tax\"n\n" +
+	"\x05price\x18\x02 \x01(\x02R\x05price\x12\x10\n" +
+	"\x03tax\x18\x03 \x01(\x02R\x03tax\"n\n" +
 	"\x13CreateOrderResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n" +
-	"\x05price\x18\x02 \x01(\tR\x05price\x12\x10\n" +
-	"\x03tax\x18\x03 \x01(\tR\x03tax\x12\x1f\n" +
-	"\vfinal_price\x18\x04 \x01(\tR\n" +
-	"finalPrice2P\n" +
-	"\fOrderService\x12@\n" +
-	"\vCreateOrder\x12\x16.pb.CreateOrderRequest\x1a\x17.pb.CreateOrderResponse\"\x00B\x18Z\x16internal/infra/grpc/pbb\x06proto3"
+	"\x05price\x18\x02 \x01(\x02R\x05price\x12\x10\n" +
+	"\x03tax\x18\x03 \x01(\x02R\x03tax\x12\x1f\n" +
+	"\vfinal_price\x18\x04 \x01(\x02R\n" +
+	"finalPrice2N\n" +
+	"\fOrderService\x12>\n" +
+	"\vCreateOrder\x12\x16.pb.CreateOrderRequest\x1a\x17.pb.CreateOrderResponseB\x18Z\x16internal/infra/grpc/pbb\x06proto3"
 
 var (
 	file_internal_infra_grpc_protofiles_order_proto_rawDescOnce sync.Once
