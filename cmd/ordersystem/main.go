@@ -8,7 +8,7 @@ import (
 
 	graphql_handler "github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/goodvandro/go-clean-arch/cmd/ordersystem/configs"
+	"github.com/goodvandro/go-clean-arch/configs"
 	"github.com/goodvandro/go-clean-arch/internal/event/handler"
 	"github.com/goodvandro/go-clean-arch/internal/infra/graph"
 	"github.com/goodvandro/go-clean-arch/internal/infra/grpc/pb"
