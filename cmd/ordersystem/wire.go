@@ -7,6 +7,7 @@ import (
 	"database/sql"
 
 	"github.com/goodvandro/go-clean-arch/internal/entity"
+	"github.com/goodvandro/go-clean-arch/internal/event"
 	"github.com/goodvandro/go-clean-arch/internal/infra/database"
 	"github.com/goodvandro/go-clean-arch/internal/infra/web"
 	"github.com/goodvandro/go-clean-arch/internal/pkg/events"
